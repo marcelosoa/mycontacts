@@ -17,6 +17,7 @@
       "react/no-typos": "off",
       "jsx-quotes": "off",
       "react/require-default-props": "off",
+      "react/jsx-no-bind": "off",
       "quotes": "off",
       "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }
     ]

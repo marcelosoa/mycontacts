@@ -6,9 +6,7 @@ export default function EditContact() {
     <>
       <PageHeader title="Editar Contato" />
 
-      <ContactForm
-        buttonLabel="Editar Informações"
-      />
+      <ContactForm buttonLabel="Editar Informações" />
     </>
   );
 }
