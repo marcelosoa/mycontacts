@@ -3,10 +3,12 @@ import { Link } from 'react-router-dom';
 import {
   Container, Header, ListContainer, Cards, InputSearchContainer,
 } from './styles';
+// import Modal from '../../components/Modal';
 
 import arrow from '../../assets/images/icons/arrowup.svg';
 import select from '../../assets/images/icons/select.svg';
 import lixeira from '../../assets/images/icons/lixeira.svg';
+// import Loader from '../../components/Loader';
 
 export default function Home() {
   return (
@@ -14,6 +16,8 @@ export default function Home() {
       <InputSearchContainer>
         <input type="search" placeholder="Pesquisar contato" />
       </InputSearchContainer>
+      {/* <Modal danger /> */}
+      {/* <Loader /> */}
       <Header>
         <strong>3 contatos</strong>
         <Link to="/new">Novo contato</Link>

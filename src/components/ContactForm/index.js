@@ -1,22 +1,30 @@
-import PropTypes from 'prop-types';
-import { Form } from './styles';
+import PropTypes from "prop-types";
+import { useState } from "react";
+import { Form, ButtonContainer } from "./styles";
 
-import FormGroup from '../FormGroup/index';
-import Input from '../Input';
-import Select from '../Select';
-import Buttom from '../Button';
+import FormGroup from "../FormGroup/index";
+import Input from "../Input";
+import Select from "../Select";
+import Button from "../Button";
 
+// Lidando com Formulários em React com Controlled Components
+// Uncontrolled components
 export default function ContactForm({ buttonLabel }) {
+  const [name, setName] = useState("");
   return (
     <Form>
       <FormGroup>
-        <Input placeholder='nome' />
+        <Input
+          value={name}
+          placeholder="nome"
+          onChange={(event) => setName(event.target.value)}
+        />
+      </FormGroup>
+      <FormGroup error="O Formato do Email é inválido">
+        <Input placeholder="email" error />
       </FormGroup>
       <FormGroup>
-        <Input placeholder='email' />
-      </FormGroup>
-      <FormGroup>
-        <Input placeholder='telefone' />
+        <Input placeholder="telefone" />
       </FormGroup>
 
       <FormGroup>
@@ -25,9 +33,9 @@ export default function ContactForm({ buttonLabel }) {
         </Select>
       </FormGroup>
 
-      <Buttom type='submit'>
-        {buttonLabel}
-      </Buttom>
+      <ButtonContainer type="submit">
+        <Button>{buttonLabel}</Button>
+      </ButtonContainer>
     </Form>
   );
 }

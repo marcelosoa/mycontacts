@@ -16,6 +16,7 @@
       "react/react-in-jsx-scope": "off",
       "react/no-typos": "off",
       "jsx-quotes": "off",
+      "react/require-default-props": "off",
       "quotes": "off",
       "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }
     ]
